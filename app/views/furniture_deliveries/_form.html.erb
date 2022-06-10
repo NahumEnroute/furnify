@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :furniture_id %>
-    <%= form.text_field :furniture_id %>
+    <%= form.select :furniture_id, @furniture_options, { include_blank: true, selected: @furniture_delivery.furniture_id } %>
   </div>
 
   <div class="field">

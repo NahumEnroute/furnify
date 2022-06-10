@@ -16,7 +16,7 @@
   <tbody>
     <% @furniture_deliveries.each do |furniture_delivery| %>
       <tr>
-        <td><%= furniture_delivery.furniture_id %></td>
+        <td><%= furniture_delivery.furniture.name %></td>
         <td><%= furniture_delivery.quantity %></td>
         <td><%= furniture_delivery.cost %></td>
         <td><%= furniture_delivery.address %></td>

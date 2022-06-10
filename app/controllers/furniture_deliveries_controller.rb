@@ -1,5 +1,6 @@
 class FurnitureDeliveriesController < ApplicationController
   before_action :set_furniture_delivery, only: %i[ show edit update destroy ]
+  before_action :set_furniture_options, only: %i[ new show edit update destroy ]
 
   # GET /furniture_deliveries or /furniture_deliveries.json
   def index
@@ -61,6 +62,10 @@ class FurnitureDeliveriesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_furniture_delivery
       @furniture_delivery = FurnitureDelivery.find(params[:id])
+    end
+
+    def set_furniture_options
+      @furniture_options = Furniture.options_for_select
     end
 
     # Only allow a list of trusted parameters through.
