@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_10_124948) do
+ActiveRecord::Schema.define(version: 2022_06_10_131252) do
+
+  create_table "furniture_deliveries", force: :cascade do |t|
+    t.integer "furniture_id", null: false
+    t.integer "quantity"
+    t.integer "cost"
+    t.string "address"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["furniture_id"], name: "index_furniture_deliveries_on_furniture_id"
+  end
 
   create_table "furnitures", force: :cascade do |t|
     t.string "name"
@@ -18,4 +28,5 @@ ActiveRecord::Schema.define(version: 2022_06_10_124948) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "furniture_deliveries", "furnitures"
 end

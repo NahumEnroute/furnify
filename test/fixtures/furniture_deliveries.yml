@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  furniture: one
+  quantity: 1
+  cost: 1
+  address: MyString
+
+two:
+  furniture: two
+  quantity: 1
+  cost: 1
+  address: MyString

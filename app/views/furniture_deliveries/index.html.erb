@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Furniture Deliveries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Furniture</th>
+      <th>Quantity</th>
+      <th>Cost</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @furniture_deliveries.each do |furniture_delivery| %>
+      <tr>
+        <td><%= furniture_delivery.furniture_id %></td>
+        <td><%= furniture_delivery.quantity %></td>
+        <td><%= furniture_delivery.cost %></td>
+        <td><%= furniture_delivery.address %></td>
+        <td><%= link_to 'Show', furniture_delivery %></td>
+        <td><%= link_to 'Edit', edit_furniture_delivery_path(furniture_delivery) %></td>
+        <td><%= link_to 'Destroy', furniture_delivery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Furniture Delivery', new_furniture_delivery_path %>

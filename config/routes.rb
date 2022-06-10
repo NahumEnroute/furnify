@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :furniture_deliveries
   resources :furnitures
 
   root to: 'pages#index'
