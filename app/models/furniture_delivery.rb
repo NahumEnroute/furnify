@@ -7,4 +7,8 @@ class FurnitureDelivery < ApplicationRecord
       self.delivery_date = Date.today
     end
   end
+
+  def total_delivery_cost
+    (self.furniture.price * self.quantity) + self.cost
+  end
 end

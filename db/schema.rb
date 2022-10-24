@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_24_194714) do
+ActiveRecord::Schema.define(version: 2022_10_24_200953) do
 
   create_table "furniture_deliveries", force: :cascade do |t|
     t.integer "furniture_id", null: false
@@ -28,6 +28,11 @@ ActiveRecord::Schema.define(version: 2022_10_24_194714) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "price"
+    t.decimal "length"
+    t.decimal "width"
+    t.decimal "height"
+    t.decimal "weight"
   end
 
   add_foreign_key "furniture_deliveries", "furnitures"

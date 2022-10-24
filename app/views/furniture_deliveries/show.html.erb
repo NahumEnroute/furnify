@@ -25,5 +25,10 @@
   <%= @furniture_delivery.delivery_date %>
 </p>
 
+<p>
+  <strong>Total price:</strong>
+  <%= @furniture_delivery.total_delivery_cost %>
+</p>
+
 <%= link_to 'Edit', edit_furniture_delivery_path(@furniture_delivery) %> |
 <%= link_to 'Back', furniture_deliveries_path %>
