@@ -20,5 +20,10 @@
   <%= @furniture_delivery.address %>
 </p>
 
+<p>
+  <strong>Delivery date:</strong>
+  <%= @furniture_delivery.delivery_date %>
+</p>
+
 <%= link_to 'Edit', edit_furniture_delivery_path(@furniture_delivery) %> |
 <%= link_to 'Back', furniture_deliveries_path %>

@@ -70,6 +70,6 @@ class FurnitureDeliveriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def furniture_delivery_params
-      params.require(:furniture_delivery).permit(:furniture_id, :quantity, :cost, :address)
+      params.require(:furniture_delivery).permit(:furniture_id, :quantity, :cost, :address, :product_send)
     end
 end
